@@ -10,7 +10,7 @@ describe("Intern class", () =>{
 });
     describe("getID", () => {
         it("Get intern id", () => {
-            const ID = "10";
+            const id = "10";
             const intern = new Intern("javier", ID, "jamondra@ucdavis.edu", "javimarashall");
             expect(intern.getID().ToBe("10"));
         })
@@ -25,7 +25,7 @@ describe("Intern class", () =>{
     describe("getSchoolName", () => {
         it("Get intern school name", () => {
             const school = "university";
-            const intern = new Intern("javier", ID, "jamondra@ucdavis.edu", school);
+            const intern = new Intern("javier", "10", "jamondra@ucdavis.edu", school);
             expect(intern.getSchoolName().ToBe("university"));
     })
 });

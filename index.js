@@ -16,6 +16,11 @@ const employeeQuestions = [
         name: "email",
         message: "What is your employee's e-mail?",
     },
+    {
+        type: "input",
+        name: "gitHub",
+        message: "What is your employee's gitHub?",
+    },
 ]
 const engineerQuestions = [
     {
@@ -32,6 +37,11 @@ const engineerQuestions = [
         type: "input",
         name: "email",
         message: "What is your engineer's e-mail?",
+    },
+    {
+        type: "input",
+        name: "gitHub",
+        message: "What is your engineer's gitHub?",
     },
 ]
 const managerQuestions = [
@@ -71,6 +81,11 @@ const internQuestions = [
         type: "input",
         name: "email",
         message: "What is your intern's e-mail?",
+    },
+    {
+        type: "input",
+        name: "school",
+        message: "What is your intern's school name?",
     },
 ]
 
