@@ -22,11 +22,11 @@ describe("Engineer class", () =>{
             expect(engineer.getEmail().ToBe("jamondragon@ucdavis.edu"));
     })
 });
-describe("getGitHub", () => {
-    it("Get engineer GitHub", () => {
-        const gitHub = "javimarashall";
-        const engineer = new Engineer("javier", ID, "jamondra@ucdavis.edu", gitHub);
-        expect(engineer.getGitHub().ToBe("javimarashall"));
+    describe("getGitHub", () => {
+        it("Get engineer GitHub", () => {
+            const gitHub = "javimarashall";
+            const engineer = new Engineer("javier", ID, "jamondra@ucdavis.edu", gitHub);
+            expect(engineer.getGitHub().ToBe("javimarashall"));
     })
 });
 })
