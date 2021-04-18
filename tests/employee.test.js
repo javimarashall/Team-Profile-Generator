@@ -10,8 +10,8 @@ describe("Employee class", () =>{
 });
     describe("getID", () => {
         it("Get employee id", () => {
-            const ID = "10";
-            const employee = new Employee("javier", ID, "jamondra@ucdavis.edu", "javimarashall");
+            const id = "10";
+            const employee = new Employee("javier", id, "jamondra@ucdavis.edu", "javimarashall");
             expect(employee.getID().ToBe("10"));
         })
 });
@@ -25,7 +25,7 @@ describe("Employee class", () =>{
     describe("getGitHub", () => {
         it("Get employee GitHub", () => {
             const gitHub = "javimarashall";
-            const employee = new Employee("javier", ID, "jamondra@ucdavis.edu", gitHub);
+            const employee = new Employee("javier", "10", "jamondra@ucdavis.edu", gitHub);
             expect(employee.getGitHub().ToBe("javimarashall"));
     })
 });
