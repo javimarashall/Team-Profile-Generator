@@ -148,33 +148,56 @@ const render = (teams) => {
         switch (employee.getRole()) {
             case "Manager":
                 return `
-                    <div class="card">
-                        <div>Name: ${employee.getName()}</div>
-                        <div>Id: ${employee.getId()}</div>
-                        <div>Email: ${employee.getEmail()}</div>
-                        <div>OfficeNumber: ${employee.getOfficeNumber()}</div>
-                    </div>
+                <div class="card bg-primary text-white" style="width: 18rem;">             
+                <div class="card-body bg-primary text-white">
+                  <h4 class="card-title">${employee.getName()}</h4>
+                  <h6 class="card-text">Manager</h6>
+                </div>
+                <ul class="list-group text-dark">
+                  <li class="list-group-item">ID: ${employee.getId()}</li>
+                  <li class="list-group-item">
+                  <a href="mailto:tester@test.com" class="card-link">Email: ${employee.getEmail()}</a>
+                  </li>
+                
+                  <li class="list-group-item">Office Number: ${employee.getOfficeNumber()}</li>
+                </ul>
+                </div>      
                 `;
             case "Intern":
                 return `
-                <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                  <h5 class="card-title">Intern</h5>
-                  <div>Name: ${employee.getName()}</div>
-                  <div>Id: ${employee.getId()}</div>
-                  <div>Email: ${employee.getEmail()}</div>
-                  <div>School: ${employee.getSchool()}</div>
+                <div class="card bg-primary text-white" style="width: 18rem;">             
+                <div class="card-body bg-primary text-white">
+                  <h4 class="card-title">${employee.getName()}</h4>
+                  <h6 class="card-text">Intern</h6>
                 </div>
-                </div>
+                <ul class="list-group text-dark">
+                  <li class="list-group-item">ID: ${employee.getId()}</li>
+                  <li class="list-group-item">
+                  <a href="mailto:tester@test.com" class="card-link">Email: ${employee.getEmail()}</a>
+                  </li>                
+                  <li class="list-group-item">School: ${employee.getSchool()}</li>
+                </ul>
+                </div>   
                 `;
             case "Engineer":
                 return `
-                    <div class="card">
-                        <div>Name: ${employee.getName()}</div>
-                        <div>Id: ${employee.getId()}</div>
-                        <div>Email: ${employee.getEmail()}</div>
-                        <div>Github: ${employee.getGithub()}</div>
-                    </div>
+                <div class="card bg-primary text-white" style="width: 18rem;">             
+                <div class="card-body bg-primary text-white">
+                  <h4 class="card-title">${employee.getName()}</h4>
+                  <h6 class="card-text">Engineer</h6>
+                </div>
+                <ul class="list-group text-dark">
+                  <li class="list-group-item">ID: ${employee.getId()}</li>
+                  <li class="list-group-item">
+                  <a href="mailto:tester@test.com" class="card-link">Email: ${employee.getEmail()}</a>
+                  </li>
+                
+                  <li class="list-group-item">
+                    <a href="https://github.com/${employee.getGithub()}" class="card-link">GitHub: ${employee.getGithub()}</a>
+                  </li>
+                </ul>
+                </div>
+              
                 `;
             default:
                 break;
@@ -197,8 +220,10 @@ const render = (teams) => {
             <h1 class="display-4">My Awesome Team</h1>
             <p class="lead">Meet the team that makes everything possible!</p>
         </div>
-        <div class="container">
-            ${employeeCardArrayOfTemplates.join("")}
+        <div class="container"> 
+            <div class="card-deck">
+                ${employeeCardArrayOfTemplates.join("")}
+            </div>
         </div>
     </body>
     </html>
