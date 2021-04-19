@@ -33,22 +33,22 @@ const ManagerQuestions = [
     {
         type: "input",
         name: "name",
-        message: "What is your name?",
+        message: "What is your manager's name?",
     },
     {
         type: "input",
         name: "id",
-        message: "What is your ID?",
+        message: "What is your manager's ID?",
     },
     {
         type: "input",
         name: "email",
-        message: "What is your e-mail?",
+        message: "What is your manager's e-mail?",
     },
     {
         type: "input",
         name: "officeNumber",
-        message: "What is your office number?",
+        message: "What is your manager's office number?",
     },
 ];
 const InternQuestions = [
@@ -116,16 +116,12 @@ const wantMore = () => {
         name: "myPick",
         message: "Who do you want to add to this team?",
         choices: [
-            "Manager",
             "Intern",
             "Engineer",
             "Please, No More"
         ]
     }]).then((answer) => {
         switch (answer.myPick) {
-            case "Manager":
-                createManager();
-                break;
             case "Engineer":
                 createEngineer();
                 break;
@@ -148,7 +144,7 @@ const render = (teams) => {
         switch (employee.getRole()) {
             case "Manager":
                 return `
-                <div class="card bg-primary text-white" style="width: 18rem;">             
+                <div class="card shadow bg-primary text-white" style="width: 18rem;">             
                 <div class="card-body bg-primary text-white">
                   <h4 class="card-title">${employee.getName()}</h4>
                   <h6 class="card-text">Manager</h6>
@@ -156,7 +152,7 @@ const render = (teams) => {
                 <ul class="list-group text-dark">
                   <li class="list-group-item">ID: ${employee.getId()}</li>
                   <li class="list-group-item">
-                  <a href="mailto:tester@test.com" class="card-link">Email: ${employee.getEmail()}</a>
+                  <a href="mailto:${employee.getEmail()}" class="card-link">Email: ${employee.getEmail()}</a>
                   </li>
                 
                   <li class="list-group-item">Office Number: ${employee.getOfficeNumber()}</li>
@@ -173,7 +169,7 @@ const render = (teams) => {
                 <ul class="list-group text-dark">
                   <li class="list-group-item">ID: ${employee.getId()}</li>
                   <li class="list-group-item">
-                  <a href="mailto:tester@test.com" class="card-link">Email: ${employee.getEmail()}</a>
+                  <a href="mailto:${employee.getEmail()}" class="card-link">Email: ${employee.getEmail()}</a>
                   </li>                
                   <li class="list-group-item">School: ${employee.getSchool()}</li>
                 </ul>
@@ -181,15 +177,15 @@ const render = (teams) => {
                 `;
             case "Engineer":
                 return `
-                <div class="card bg-primary text-white" style="width: 18rem;">             
-                <div class="card-body bg-primary text-white">
+                <div class="card shadow-sm bg-primary text-white" style="width: 18rem;">             
+                <div class="card-body shadow-sm bg-primary text-white">
                   <h4 class="card-title">${employee.getName()}</h4>
                   <h6 class="card-text">Engineer</h6>
                 </div>
                 <ul class="list-group text-dark">
                   <li class="list-group-item">ID: ${employee.getId()}</li>
                   <li class="list-group-item">
-                  <a href="mailto:tester@test.com" class="card-link">Email: ${employee.getEmail()}</a>
+                  <a href="mailto: ${employee.getEmail()}" class="card-link">Email: ${employee.getEmail()}</a>
                   </li>
                 
                   <li class="list-group-item">
@@ -211,7 +207,7 @@ const render = (teams) => {
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>Team Profile Generator</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="style.css" />
     </head>    
@@ -230,4 +226,4 @@ const render = (teams) => {
     `
 }
 
-wantMore();
+createManager();
