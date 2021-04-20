@@ -18,7 +18,7 @@ This application contains a team profile generator based on user input. This app
 ## Installation
 In order to run this application, the user needs to install node.js, npm install inquire, and npm install jest. 
 ## Code Snippet
-
+This code snippet represents one of the test that were done as the application was created. The tests were used to make sure the application was doing what it was supposed to before completion. 
 ```java
 const Employee = require("../lib/employee")
 
@@ -31,4 +31,11 @@ describe("Employee class", () => {
     });
 })
 ```
+## Repository Link
+https://github.com/javimarashall/Team-Profile-Generator
 
+## Video Link
+
+## Personal Links
+[Github](https://github.com/javimarashall)<br>
+[Linkedin](https://www.linkedin.com/in/javier-mondragon-7b471719b/)
