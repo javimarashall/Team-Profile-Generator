@@ -118,7 +118,7 @@ const wantMore = () => {
         choices: [
             "Intern",
             "Engineer",
-            "Please, No More"
+            "No More"
         ]
     }]).then((answer) => {
         switch (answer.myPick) {
